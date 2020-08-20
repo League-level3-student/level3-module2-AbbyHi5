@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class _01_SwappingDigits {
-
+	static int[] sorted;
 	@Test
 	void test() {
 		int[] x = { 5, 6 };
@@ -53,6 +53,7 @@ class _01_SwappingDigits {
 				}
 			}
 			else {
+				sorted = arr;
 				break;
 			}
 		}
@@ -62,10 +63,7 @@ class _01_SwappingDigits {
 	// *Hint* it helps to sort it first.
 	// *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		sortIntArray(arr);
-		int middle = (arr.length / 2) + 1;
-		System.out.println(middle);
-		System.out.println(arr[middle]);
+		int middle = (sorted.length / 2) + 1;
 		return arr[middle];
 	}
 }
